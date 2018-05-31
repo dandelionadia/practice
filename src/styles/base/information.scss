@@ -1,0 +1,35 @@
+.information {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 992px) {
+      height: 400px;
+    }
+
+  &__title {
+    font-size: 70px;
+    text-align: center;
+    color: $color-black; 
+    background-color: $color-white;
+    max-width: 800px;
+
+    @media (max-width: 992px) {
+      font-size: 50px; 
+    }
+
+    @media (max-width: 576px) {
+      font-size: 40px;
+    } 
+     
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: $color-white;
+    padding-top: 20px;    
+  }
+
+}
