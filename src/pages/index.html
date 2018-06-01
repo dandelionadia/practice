@@ -47,7 +47,7 @@
         <div class="col-12">
           <div class="registration">
             <div class="registration__box my-5">
-              <form action="">
+              <form action="" id="form">
                 <!-- title-->
                 <div class="row">
                   <div class="col-sm-12">
@@ -59,38 +59,41 @@
                     <div class="row">
                       <div class="col">
                         <label for="formGroupExampleInputFirstName">First name</label>
-                        <input type="text" class="form-control" id="formGroupExampleInputFirstName">
+                        <input type="text" name="firstName" class="form-control" id="formGroupExampleInputFirstName">
                       </div>
                       <div class="col">
                         <label for="formGroupExampleInputLastName">Last name</label>
-                        <input type="text" class="form-control" id="formGroupExampleInputLastName">
+                        <input type="text" name="lastName" class="form-control" id="formGroupExampleInputLastName">
                       </div>
                     </div>
                   </div>
                   <!--Username-->
-                  <div class="form-group">
+                  <div class="form-group has-feedback usernameBlock">
                     <label for="inlineFormInputGroupUsername">Username</label>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">@</div>
                       </div>
-                      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                      <input type="text" name="username" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
                     </div>
                   </div>
                   <!-- Email -->
-                  <div class="form-group">
+                  <div class="form-group has-feedback emailBlock">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="you@example.com">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="you@example.com">
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
                   </div>
                   <!-- address -->
                   <div class="form-group">
                     <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
                   </div>
                   <!-- phone -->
                   <div class="form-group">
                     <label for="exampleInputPhone">Phone</label>
-                    <input type="phone" class="form-control" id="exampleInputPhone" aria-describedby="emailHelp" placeholder="+420 ...">
+                    <input type="phone" name="phone" class="form-control" id="exampleInputPhone" placeholder="+420 ...">
                   </div>
                   <!--  -->
                   <div class="form-row">
@@ -112,13 +115,13 @@
                     </div>
                     <div class="form-group col-md-4">
                       <label for="inputZip">Zip</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" name="zip" class="form-control" id="inputZip">
                     </div>
                   </div>
                   <!-- hr -->
                   <hr>
                   <!-- button -->
-                  <button type="button" class="btn btn-primary btn-lg btn-block">Submit registration</button>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Submit registration</button>
                   
               </form>
             </div>
