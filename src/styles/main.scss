@@ -3,15 +3,14 @@
 /* Variables */
 @import 'variables';
 
-/* Base */
+/* Base */ 
 @import 'base/typography';
 @import 'base/button';
-@import 'base/information';
-@import 'base/menu';
-@import 'base/header';
 
 /* Components */
+@import 'components/header';
+@import 'components/information';
+@import 'components/menu';
 @import 'components/section';
-@import 'components/post';
-@import 'components/preview';
+@import 'components/registration';
  
