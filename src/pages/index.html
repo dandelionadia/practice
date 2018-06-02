@@ -114,19 +114,25 @@
                   <div class="form-row">
                       <div class="form-group col-md-4">
                         <label for="inputCountry">Country</label>
-                        <select id="inputCountry" class="form-control">
-                          <option selected>Choose...</option>
+                        <select id="inputCountry" name="country" class="form-control">
+                          <option value="">Choose...</option>
                           <option>Argentina</option>
                           <option>Australia</option>
                         </select>
+                        <div class="valid-feedback change-info__country">
+                          Good!
+                        </div>
                       </div>
                     <div class="form-group col-md-4">
                       <label for="inputState">State</label>
-                      <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
+                      <select id="inputState" name="state" class="form-control">
+                        <option value="">Choose...</option>
                         <option>Kansas</option>
                         <option>Montana</option>
                       </select>
+                      <div class="valid-feedback change-info__state">
+                        Good!
+                      </div>
                     </div>
                     <div class="form-group col-md-4">
                       <label for="inputZip">Zip</label>

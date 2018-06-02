@@ -5,6 +5,9 @@ $(document).ready(function () {
    var validUsername = false;
    var validAddress = false;
    var validPhone = false;
+   var validCountry = false;
+   var validState = false;
+   var validZip = false;
 
   $('form').submit(function(event) {
     // заборонити щоб форма не відправлялась.щоб був час на перевірку заповнення форми
@@ -17,6 +20,9 @@ $(document).ready(function () {
     var username = $('#inlineFormInputGroupUsername').val();
     var address = $('#inputAddress').val();
     var phone = $('#exampleInputPhone').val();
+    var country = $('#inputCountry').val();
+    var state = $('#inputState').val();
+    var zip = $('#inputZip').val();
 
     if (firstName == '') {
         // якщо строка порожня то додаємо клас який покаже помилку input
@@ -91,6 +97,42 @@ $(document).ready(function () {
       $('.change-info__phone').removeClass('invalid-feedback').addClass('valid-feedback');
       $('div.change-info__phone').html('Good!');      
       validPhone = true;       
+    }
+
+    if (country == '') {
+      $('#inputCountry').removeClass('is-valid').addClass('is-invalid');
+      $('.change-info__country').removeClass('valid-feedback').addClass('invalid-feedback');
+      $('div.change-info__country').html('Input  is not filled!');
+      validCountry = false;
+    } else {
+      $('#inputCountry').removeClass('is-invalid').addClass('is-valid');  
+      $('.change-info__country').removeClass('invalid-feedback').addClass('valid-feedback');
+      $('div.change-info__country').html('Good!');      
+      validCountry = true;       
+    }
+
+    if (state == '') {
+      $('#inputState').removeClass('is-valid').addClass('is-invalid');
+      $('.change-info__state').removeClass('valid-feedback').addClass('invalid-feedback');
+      $('div.change-info__state').html('Input  is not filled!');
+      validState = false;
+    } else {
+      $('#inputState').removeClass('is-invalid').addClass('is-valid');  
+      $('.change-info__state').removeClass('invalid-feedback').addClass('valid-feedback');
+      $('div.change-info__state').html('Good!');      
+      validState = true;       
+    }
+
+    if (zip == '') {
+      $('#inputZip').removeClass('is-valid').addClass('is-invalid');
+      $('.change-info__zip').removeClass('valid-feedback').addClass('invalid-feedback');
+      $('div.change-info__zip').html('Input  is not filled!');
+      validZip = false;
+    } else {
+      $('#inputZip').removeClass('is-invalid').addClass('is-valid');  
+      $('.change-info__zip').removeClass('invalid-feedback').addClass('valid-feedback');
+      $('div.change-info__zip').html('Good!');      
+      validZip = true;       
     }
 
     // if (validEmail = true) {
