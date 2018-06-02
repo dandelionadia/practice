@@ -12,14 +12,14 @@ $(document).ready(function () {
       // якщо строка порожня то додаємо клас який покаже помилку
       $('#exampleInputEmail1').removeClass('is-valid').addClass('is-invalid');
       // додаємо клас помилки 
-      $('#emailBlock').removeClass('valid-feedback').addClass('invalid-feedback');
-      
-      
+      $('.change-info').removeClass('valid-feedback').addClass('invalid-feedback');
+      // перезаписати текст
+      $('div.change-info').html('bad');
       validName = false;
     } else {
       $('#exampleInputEmail1').removeClass('is-invalid').addClass('is-valid');  
-      $('#emailBlock').removeClass('invalid-feedback').addClass('valid-feedback');
-      
+      $('.change-info').removeClass('invalid-feedback').addClass('valid-feedback');
+      $('div.change-info').html('good');      
       validEmail = true;
           
     }
