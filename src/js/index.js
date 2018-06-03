@@ -95,17 +95,17 @@ $(document).ready(function () {
       $('#inputAddress').removeClass('is-valid').addClass('is-invalid');
       $('.change-info__address').removeClass('valid-feedback').addClass('invalid-feedback');
       $('div.change-info__address').html('Must be more than 5 characters!');
-      validName = false;
+      validAddress = false;
     } else if (address.length < 5) {
       $('#inputAddress').removeClass('is-valid').addClass('is-invalid');
       $('.change-info__address').removeClass('valid-feedback').addClass('invalid-feedback');
       $('div.change-info__address').html('Must be more than 5 characters!');
-      validName = false;
+      validAddress = false;
     } else {
       $('#inputAddress').removeClass('is-invalid').addClass('is-valid');  
       $('.change-info__address').removeClass('invalid-feedback').addClass('valid-feedback');
       $('div.change-info__address').html('Good!');      
-      validEmail = true;       
+      validAddress = true;       
     }
 
     if (phone == '') {
@@ -161,12 +161,28 @@ $(document).ready(function () {
       validZip = true;       
     }
 
-    // if (validEmail = true) {
-    //   console.log('good');
-    //   // відв'язати подію заборони і  дозволити відправлення форми.
-    //   $('form').unbind('submit').submit();
-    // }
+    console.log({ validEmail })
+    console.log({ validFirstName })
+    console.log({ validUsername })
+    console.log({ validAddress })
+    console.log({ validPhone })
+    console.log({ validCountry })
+    console.log({ validState })
+    console.log({ validZip })
+
+    if (
+      validEmail &&
+      validFirstName &&
+      validLastName &&
+      validUsername &&
+      validAddress &&
+      validPhone &&
+      validCountry &&
+      validState &&
+      validZip) {
+      $('#form').hide();
+      $('.registration__box').append('<div class="message">The form is sent.</div>');
+    }
       
   })
 })
-
