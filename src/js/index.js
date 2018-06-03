@@ -10,10 +10,8 @@ $(document).ready(function () {
    var validZip = false;
 
   $('form').submit(function(event) {
-    // заборонити щоб форма не відправлялась.щоб був час на перевірку заповнення форми
     event.preventDefault();
 
-    // отримує значення поля
     var email = $('#exampleInputEmail1').val();
     var firstName = $('#formGroupExampleInputFirstName').val();    
     var lastName = $('#formGroupExampleInputLastName').val();
@@ -41,7 +39,6 @@ $(document).ready(function () {
       $('#formGroupExampleInputFirstName').removeClass('is-invalid').addClass('is-valid');  
       $('.change-info__firstName').removeClass('invalid-feedback').addClass('valid-feedback');
       $('div.change-info__firstName').html('Good!');
-      // console.log(firstName.length);
       validFirstName = true;   
     }
 
