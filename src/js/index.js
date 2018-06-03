@@ -30,12 +30,18 @@ $(document).ready(function () {
       // додаємо клас який показує колір текстово повідомлення помилки
       $('.change-info__firstName').removeClass('valid-feedback').addClass('invalid-feedback');
       // перезаписати текст помилки
-      $('div.change-info__firstName').html('Must be more than 3 letters!');      
+      $('div.change-info__firstName').html('Must be more than 3 letters!');   
       validFirstName = false;    
+    } else if (firstName.length < 3 ) {
+      $('#formGroupExampleInputFirstName').removeClass('is-valid').addClass('is-invalid');
+      $('.change-info__firstName').removeClass('valid-feedback').addClass('invalid-feedback');
+      $('div.change-info__firstName').html('Must be more than 3 letters!'); 
+      validFirstName = false;            
     } else {
       $('#formGroupExampleInputFirstName').removeClass('is-invalid').addClass('is-valid');  
       $('.change-info__firstName').removeClass('invalid-feedback').addClass('valid-feedback');
       $('div.change-info__firstName').html('Good!');
+      // console.log(firstName.length);
       validFirstName = true;   
     }
 
@@ -44,6 +50,11 @@ $(document).ready(function () {
       $('.change-info__lastName').removeClass('valid-feedback').addClass('invalid-feedback');
       $('div.change-info__lastName').html('Must be more than 3 letters!');
       validLastName = false;
+    } else if (lastName.length < 3) {
+      $('#formGroupExampleInputLastName').removeClass('is-valid').addClass('is-invalid');
+      $('.change-info__lastName').removeClass('valid-feedback').addClass('invalid-feedback');
+      $('div.change-info__lastName').html('Must be more than 3 letters!');
+      validLastName = false;    
     } else {
       $('#formGroupExampleInputLastName').removeClass('is-invalid').addClass('is-valid'); 
       $('.change-info__lastName').removeClass('invalid-feedback').addClass('valid-feedback');
@@ -52,6 +63,11 @@ $(document).ready(function () {
     }
 
     if(username == '') {
+      $('#inlineFormInputGroupUsername').removeClass('is-valid').addClass('is-invalid');
+      $('.change-info__username').removeClass('valid-feedback').addClass('invalid-feedback');
+      $('div.change-info__username').html('Must be more than 3 characters!');
+      validUsername = false;
+    } else if (username.length < 3) {
       $('#inlineFormInputGroupUsername').removeClass('is-valid').addClass('is-invalid');
       $('.change-info__username').removeClass('valid-feedback').addClass('invalid-feedback');
       $('div.change-info__username').html('Must be more than 3 characters!');
@@ -80,6 +96,11 @@ $(document).ready(function () {
       $('.change-info__address').removeClass('valid-feedback').addClass('invalid-feedback');
       $('div.change-info__address').html('Must be more than 5 characters!');
       validName = false;
+    } else if (address.length < 5) {
+      $('#inputAddress').removeClass('is-valid').addClass('is-invalid');
+      $('.change-info__address').removeClass('valid-feedback').addClass('invalid-feedback');
+      $('div.change-info__address').html('Must be more than 5 characters!');
+      validName = false;
     } else {
       $('#inputAddress').removeClass('is-invalid').addClass('is-valid');  
       $('.change-info__address').removeClass('invalid-feedback').addClass('valid-feedback');
@@ -88,6 +109,11 @@ $(document).ready(function () {
     }
 
     if (phone == '') {
+      $('#exampleInputPhone').removeClass('is-valid').addClass('is-invalid');
+      $('.change-info__phone').removeClass('valid-feedback').addClass('invalid-feedback');
+      $('div.change-info__phone').html('Must be more than 9 numbers!');
+      validPhone = false;
+    } else if (phone.length < 9) {
       $('#exampleInputPhone').removeClass('is-valid').addClass('is-invalid');
       $('.change-info__phone').removeClass('valid-feedback').addClass('invalid-feedback');
       $('div.change-info__phone').html('Must be more than 9 numbers!');
