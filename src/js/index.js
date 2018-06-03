@@ -25,7 +25,7 @@ $(document).ready(function () {
     var zip = $('#inputZip').val();
 
     if (firstName == '') {
-        // якщо строка порожня то додаємо клас який покаже помилку input
+      // якщо строка порожня то додаємо клас який покаже помилку input
       $('#formGroupExampleInputFirstName').removeClass('is-valid').addClass('is-invalid');
       // додаємо клас який показує колір текстово повідомлення помилки
       $('.change-info__firstName').removeClass('valid-feedback').addClass('invalid-feedback');
@@ -161,15 +161,6 @@ $(document).ready(function () {
       validZip = true;       
     }
 
-    console.log({ validEmail })
-    console.log({ validFirstName })
-    console.log({ validUsername })
-    console.log({ validAddress })
-    console.log({ validPhone })
-    console.log({ validCountry })
-    console.log({ validState })
-    console.log({ validZip })
-
     if (
       validEmail &&
       validFirstName &&
@@ -180,8 +171,8 @@ $(document).ready(function () {
       validCountry &&
       validState &&
       validZip) {
-      $('#form').hide();
-      $('.registration__box').append('<div class="message">The form is sent.</div>');
+        $('#form').hide();
+        $('.registration__box').append('<div class="message">The form is sent.</div>');
     }
       
   })
