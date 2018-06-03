@@ -8,3 +8,13 @@
   }
 }
 
+.message {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: $color-white;
+  border: 1px solid $color-black;
+}
