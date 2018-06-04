@@ -15,6 +15,11 @@
   align-items: center;
   border-radius: 5px;
   padding: 5px;
+  margin-bottom: 20px;
   background-color: $color-white;
   border: 1px solid $color-black;
+}
+
+.foo {
+  color: rgb(158, 151, 151);
 }

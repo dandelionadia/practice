@@ -169,7 +169,20 @@ $(document).ready(function () {
       validState &&
       validZip) {
         $('#form').hide();
-        $('.registration__box').append('<div class="message">The form is sent.</div>');
+        $('.registration__box').append('<div class="message">The form is sent.</div> <p class="firstNameResult"><span class="foo">First Name:</span></p> <p class="lastNameResult"><span class="foo">Last Name:</span></p>  <p class="usernameResult"><span class="foo">Username:</span></p> <p class="emailResult"><span class="foo">Email:</span></p> <p class="addressResult"><span class="foo">Address:</span></p> <p class="phoneResult"><span class="foo">Phone:</span></p> <p class="countryResult"><span class="foo">Country:</span></p> <p class="stateResult"><span class="foo">State:</span></p> <p class="zipResult"><span class="foo">Zip:</span></p>');
+      
+        function finishForm (field, value) {
+          $(field).append(' ' + value);
+        }
+        finishForm('.firstNameResult', firstName);
+        finishForm('.lastNameResult', lastName);
+        finishForm('.usernameResult', username);
+        finishForm('.emailResult', email);
+        finishForm('.addressResult', address);                      
+        finishForm('.phoneResult', phone);                      
+        finishForm('.countryResult', country);                      
+        finishForm('.stateResult', state);                      
+        finishForm('.zipResult', zip);                      
     }
       
   })
