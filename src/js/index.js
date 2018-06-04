@@ -169,7 +169,18 @@ $(document).ready(function () {
       validState &&
       validZip) {
         $('#form').hide();
-        $('.registration__box').append('<div class="message">The form is sent.</div> <p class="firstNameResult"><span class="foo">First Name:</span></p> <p class="lastNameResult"><span class="foo">Last Name:</span></p>  <p class="usernameResult"><span class="foo">Username:</span></p> <p class="emailResult"><span class="foo">Email:</span></p> <p class="addressResult"><span class="foo">Address:</span></p> <p class="phoneResult"><span class="foo">Phone:</span></p> <p class="countryResult"><span class="foo">Country:</span></p> <p class="stateResult"><span class="foo">State:</span></p> <p class="zipResult"><span class="foo">Zip:</span></p>');
+        $('.registration__box').append(`
+          <div class="message">The form is sent.</div>
+          <p class="firstNameResult"><span class="text-gray">First Name:</span></p>
+          <p class="lastNameResult"><span class="text-gray">Last Name:</span></p> 
+          <p class="usernameResult"><span class="text-gray">Username:</span></p>
+          <p class="emailResult"><span class="text-gray">Email:</span></p>
+          <p class="addressResult"><span class="text-gray">Address:</span></p>
+          <p class="phoneResult"><span class="text-gray">Phone:</span></p>
+          <p class="countryResult"><span class="text-gray">Country:</span></p>
+          <p class="stateResult"><span class="text-gray">State:</span></p>
+          <p class="zipResult"><span class="text-gray">Zip:</span></p>
+        `);
       
         function finishForm (field, value) {
           $(field).append(' ' + value);
